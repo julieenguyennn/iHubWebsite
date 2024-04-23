@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var cards = document.querySelectorAll('.card');
-  
-    cards.forEach(function (card) {
-      card.addEventListener('click', function () {
-        openOverlay(card);
-      });
-    });
-  
-    document.querySelector('.close-btn').addEventListener('click', function () {
-      closeOverlay();
-    });
+  document.addEventListener('click', function (event) {
+      var card = event.target.closest('.card');
+      if (card) {
+          var overlayId = card.getAttribute('data-overlay-id');
+          openOverlay(overlayId);
+      }
   });
-  
-  function openOverlay(card) {
-    var imgSrc = card.querySelector('img').src;
-    var header = card.querySelector('h3').textContent;
-    var text = card.querySelector('p').textContent;
-  
-    document.getElementById('overlay-img').src = imgSrc;
-    document.getElementById('overlay-header').textContent = header;
-    document.getElementById('overlay-text').textContent = text;
-  
-    document.getElementById('overlay').style.display = 'block';
+
+  document.addEventListener('click', function (event) {
+      if (event.target.classList.contains('close-btn')) {
+          closeOverlay();
+      }
+  });
+});
+
+function openOverlay(overlayId) {
+  var overlay = document.getElementById(overlayId);
+  if (overlay) {
+      overlay.style.display = 'block';
   }
-  
-  function closeOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-  }
+}
+
+function closeOverlay() {
+  var overlays = document.querySelectorAll('.overlay');
+  overlays.forEach(function (overlay) {
+      overlay.style.display = 'none';
+  });
+}
