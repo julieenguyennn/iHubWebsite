@@ -1,19 +1,59 @@
 /* Overlay Card */
-<div id="member-card" class="member-card">
-  <div class="card-content">
-    <img/><img class=" wp-image-10552" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" />
-    <div class="person-intro">
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <script src="script.js"></script>
+
+  <div class="card" data-overlay-id="overlay1">
+    <img class=" wp-image-10552" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" />
       <h3>Paul Kaita</h3>
-      <h4>Senior Project Assistant</h4>
+      <p>Senior Project Assistant</p>
+  </div>
+
+  <div class="card" data-overlay-id="overlay2">
+    <img class=" wp-image-10552" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" />
+    <h3>Tiffany Cao</h3>
+    <p>Research Lead</p>
+  </div>
+    
+  <div class="card" data-overlay-id="overlay3">
+    <img class=" wp-image-10552" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" />
+    <h3>Cheryl Nong</h3>
+    <p>Research Coordinator</p>
+  </div>
+    
+  <div id="overlay1" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" alt="">
+      <h3 id="overlay-header"> Paul Kaita</h3>
+      <p id="overlay-text"> Senior Project Assistant</p>
+      Paul Kaita (he/him) is currently a graduate student at OISE in the Master of Education, Higher Education program. He previously completed his Honours Bachelor of Arts in Architecture and Visual Studies here at UofT. As Senior Project Assistant, Paul oversees communications, general administration, accessibility of design materials, and supports project teams. He is originally from British Columbia and really enjoyed making Toronto his new home. Paul is excited to translate his passions for art, design, and the student experience during his time at the Innovation Hub. 
     </div>
   </div>
-</div>
-<div id="overlay" class="overlay-container">
-  <div class="overlay-content">
-    <img /><img class=" wp-image-10552" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2022/02/Paul-Kaita_Headshot-scaled-e1644520833831-300x300.jpg" alt="Paul smiling against the backdrop of a lake with rocks" width="147" height="145" />
-    <h3>Paul Kaita</h3>
-    <h4>Senior Project Assistant</h4>
-    Paul Kaita (he/him) is currently a graduate student at OISE in the Master of Education, Higher Education program. He previously completed his Honours Bachelor of Arts in Architecture and Visual Studies here at UofT. As Senior Project Assistant, Paul oversees communications, general administration, accessibility of design materials, and supports project teams. He is originally from British Columbia and really enjoyed making Toronto his new home. Paul is excited to translate his passions for art, design, and the student experience during his time at the Innovation Hub.
+
+  <div id="overlay2" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="">
+      <h3 id="overlay-header"></h3>
+      <p id="overlay-text"></p>
+      Tiffany (she/her/hers) recently received her Honours Bachelor of Science in environmental science and human geography. She has recently joined the team at the Innovation Hub as a Research Lead. Tiffany finds great value and importance in centering people’s experiences in research meant to directly support them and has enjoyed contributing to many qualitative research projects. She strives to create accessible and welcoming spaces for everyone. In her free time, Tiffany likes to read and do creative hobbies such as art and music. She also likes clouds and stuffed animals.
+    </div>
   </div>
-  <img class="close-btn" src="http://blogs.studentlife.utoronto.ca/innovationhub-dev/files/2024/02/close-300x300.png" alt="close button" width="20" height="20" />
-</div>
+
+  <div id="overlay3" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn">&times;</span>
+      <img id="overlay-img" src="" alt="">
+      <h3 id="overlay-header"></h3>
+      <p id="overlay-text"></p>
+      Cheryl recently completed her Honours Bachelor of Science in psychology and neuroscience at UofT. As both a scientist and a storyteller, she's always been interested in the intersections of lived experience and empirical research. After working in student organizations throughout undergrad to make the university community more accessible, inclusive, and fun, she's now excited to bring her experience in mentorship and community engagement to support the Innovation Hub team as Research Coordinator. Outside of the Innovation Hub, you can find her writing, listening to music, and experimenting in the kitchen, sometimes all at once.
+    </div>
+  </div>
+
+</body>
+</html>
