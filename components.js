@@ -1,23 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (event) {
-      var card = event.target.closest('.card');
-      if (card) {
-          var overlayId = card.getAttribute('data-overlay-id');
-          openOverlay(overlayId);
-      }
+  var cards = document.querySelectorAll('.card');
+
+  cards.forEach(function (card, index) {
+      // Set tabindex dynamically
+      card.setAttribute('tabindex', index + 1);
+
+      // Add click event listener
+      card.addEventListener('click', function (event) {
+          openOverlay(card);
+      });
+
+      // Add keydown event listener for handling enter key
+      card.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+              openOverlay(card);
+          }
+      });
   });
 
+  // Add click event listener for close button
   document.addEventListener('click', function (event) {
       if (event.target.classList.contains('close-btn')) {
           closeOverlay();
       }
   });
+
+  // Add keydown event listener for closing overlay with Escape key
+  document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+          closeOverlay();
+      }
+  });
 });
 
-function openOverlay(overlayId) {
+function openOverlay(card) {
+  var overlayId = card.getAttribute('data-overlay-id');
   var overlay = document.getElementById(overlayId);
   if (overlay) {
       overlay.style.display = 'block';
+      overlay.setAttribute('tabindex', '0'); // Set tabindex for overlay to make it focusable
+      overlay.focus(); // Focus the overlay
   }
 }
 
