@@ -10,7 +10,18 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
+    transition: transform 0.2s ease-in-out;
   }
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img,
+.card h3,
+.card p {
+  margin-bottom: 4px;
+}
 
 .card img, .overlay-content img{
     border: 2px solid #012a5d;
@@ -19,7 +30,7 @@
     height: 100px;
 }
   
-  .overlay {
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -28,9 +39,9 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: inherit;
-  }
-  
-  .overlay-content {
+}
+
+.overlay-content {
     background-color: white;
     width: 80%;
     max-width: 600px;
@@ -42,11 +53,11 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-  }
+}
